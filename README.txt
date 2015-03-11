@@ -16,53 +16,93 @@ See notes below.
 
 6) check the following situations, using this "full" FED list:
  
-test | data  |   e-map    |  CDAQ includes  |   desired digis	|  run number  | 
-     |       |            |   HBHE   HF     |    HBHE    HF	|      	       |
------+-------+------------+-----------------+-------------------+---------------
-a      Run 1      VME         VME    VME         VME    VME	   191226
-b      Run 1    VME+uTCA      VME    VME         VME    VME	   191226
-c       LS 1      VME         VME    VME         VME    VME	   234628
-d       LS 1    VME+uTCA      VME    VME         VME    VME	   234628
-e       LS 1      VME         VME  VME+uTCA      VME    VME	   236445
-f       LS 1    VME+uTCA      VME  VME+uTCA      VME    uTCA	   236445
-g       LS 1      VME         VME   uTCA         VME    empty	   237318
-h       LS 1    VME+uTCA      VME   uTCA         VME    uTCA	   237318
+test | data  |   e-map    |  CDAQ includes  |   desired digis	|  run number  |  status  |
+     |       |            |   HBHE   HF     |    HBHE    HF	|      	       |          |
+-----+-------+------------+-----------------+-------------------+--------------+-----------
+a      Run 1      VME         VME    VME         VME    VME	   191226	  Pending
+b      Run 1    VME+uTCA      VME    VME         VME    VME	   191226	  Pending
+c       LS 1      VME         VME    VME         VME    VME	   234628	  DONE
+d       LS 1    VME+uTCA      VME    VME         VME    VME	   234628	  DONE
+e       LS 1      VME         VME  VME+uTCA      VME    VME	   235316	  DONE
+f       LS 1    VME+uTCA      VME  VME+uTCA      VME    uTCA	   235316	  DONE
+g       LS 1      VME         VME   uTCA         VME    empty	   237318	  DONE
+h       LS 1    VME+uTCA      VME   uTCA         VME    uTCA	   237318	  DONE
 
 Test a:
 =======
 
+cmsRun analysis_utca_compare_test_cfg.py \
+inputFiles="root://eoscms//eos/cms/store/data/Run2012A/Jet/RAW/v1/000/191/226/E8534734-D585-E111-A866-003048F11114.root" \
+outputFile="outputFile_191226_vmeOnlyEmap.root" \
+emap="vme" \
+processEvents=1
+
+* seg fault *
+
 Test b:
 =======
+
+cmsRun analysis_utca_compare_test_cfg.py \
+inputFiles="root://eoscms//eos/cms/store/data/Run2012A/Jet/RAW/v1/000/191/226/E8534734-D585-E111-A866-003048F11114.root" \
+outputFile="outputFile_191226_vmeutcaEmap.root" \
+emap="vme+utca" \
+processEvents=1
+
+* seg fault *
 
 Test c:
 =======
 
+cmsRun analysis_utca_compare_test_cfg.py \
+inputFiles="root://eoscms//eos/cms/store/data/Commissioning2015/MinimumBias/RAW/v1/000/234/628/00000/18271693-CAB6-E411-AF94-02163E01274B.root" \
+outputFile="outputFile_234628_vmeOnlyEmap.root" \
+emap="vme" \
+processEvents=1
+
 Test d:
 =======
+
+cmsRun analysis_utca_compare_test_cfg.py \
+inputFiles="root://eoscms//eos/cms/store/data/Commissioning2015/MinimumBias/RAW/v1/000/234/628/00000/18271693-CAB6-E411-AF94-02163E01274B.root" \
+outputFile="outputFile_234628_vmeutcaEmap.root" \
+emap="vme+utca" \
+processEvents=1
 
 Test e:
 =======
 
+cmsRun analysis_utca_compare_test_cfg.py \
+inputFiles="root://eoscms//eos/cms/store/data/Commissioning2015/MinimumBias/RAW/v1/000/236/445/00000/522FB2AC-F5C0-E411-8841-02163E01221B.root" \
+outputFile="outputFile_236445_vmeOnlyEmap.root" \
+emap="vme" \
+processEvents=1
+
 Test f:
 =======
+
+cmsRun analysis_utca_compare_test_cfg.py \
+inputFiles="root://eoscms//eos/cms/store/data/Commissioning2015/MinimumBias/RAW/v1/000/236/445/00000/522FB2AC-F5C0-E411-8841-02163E01221B.root" \
+outputFile="outputFile_236445_vmeutcaEmap.root" \
+emap="vme+utca" \
+processEvents=1
 
 Test g:
 =======
 
- cmsRun analysis_utca_compare_test_cfg.py \
+cmsRun analysis_utca_compare_test_cfg.py \
 inputFiles="root://eoscms//eos/cms/store/data/Commissioning2015/MinimumBias/RAW/v1/000/237/318/00000/24F11386-94C6-E411-96AC-02163E012078.root" \
 outputFile="outputFile_237318_vmeonlyEmap.root" \
 emap="vme" \
-processEvents=10
+processEvents=1
 
 Test h:
 =======
 
- cmsRun analysis_utca_compare_test_cfg.py \
+cmsRun analysis_utca_compare_test_cfg.py \
 inputFiles="root://eoscms//eos/cms/store/data/Commissioning2015/MinimumBias/RAW/v1/000/237/318/00000/24F11386-94C6-E411-96AC-02163E012078.root" \
 outputFile="outputFile_237318_vmeutcaEmap.root" \
 emap="vme+utca" \
-processEvents=10
+processEvents=1
 
 
 
