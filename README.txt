@@ -19,8 +19,8 @@ See notes below.
 test | data  |   e-map    |  CDAQ includes  |   desired digis	|  run number  |  status  |
      |       |            |   HBHE   HF     |    HBHE    HF	|      	       |          |
 -----+-------+------------+-----------------+-------------------+--------------+-----------
-a      Run 1      VME         VME    VME         VME    VME	   191226	  Pending
-b      Run 1    VME+uTCA      VME    VME         VME    VME	   191226	  Pending
+a      Run 1      VME         VME    VME         VME    VME	   191226	  -
+b      Run 1    VME+uTCA      VME    VME         VME    VME	   191226	  -
 c       LS 1      VME         VME    VME         VME    VME	   234628	  DONE
 d       LS 1    VME+uTCA      VME    VME         VME    VME	   234628	  DONE
 e       LS 1      VME         VME  VME+uTCA      VME    VME	   235316	  DONE
