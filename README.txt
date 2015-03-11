@@ -16,9 +16,9 @@ See notes below.
 
 6) check the following situations, using this "full" FED list:
  
-test | data  |   e-map    |  CDAQ includes  |   desired digis	|  run number  |  status  |
-     |       |            |   HBHE   HF     |    HBHE    HF	|      	       |          |
------+-------+------------+-----------------+-------------------+--------------+-----------
+test | data  |   e-map    |  CDAQ includes  |   desired digis	|  run number  | status 
+     |       |            |   HBHE   HF     |    HBHE    HF	|      	       |        
+-----+-------+------------+-----------------+-------------------+--------------+--------
 a      Run 1      VME         VME    VME         VME    VME	   191226	  -
 b      Run 1    VME+uTCA      VME    VME         VME    VME	   191226	  -
 c       LS 1      VME         VME    VME         VME    VME	   234628	  DONE
